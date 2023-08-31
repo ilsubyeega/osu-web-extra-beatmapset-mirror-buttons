@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         osu-web Extra: Beatmapset Page Mirror Buttons
 // @namespace    https://userscripts.fmt.kr/
-// @version      1.0
+// @version      1.0.1
 // @description  Adds Nerinyan and Beatconnect mirror buttons to the beatmapset page on osu-web (osu.ppy.sh)
 // @author       fmtkr (ilsubyeega)
 // @match        https://osu.ppy.sh/*
@@ -64,6 +64,7 @@
       button.dataset.turbolinks = 'false';
       button.style.setProperty('--bg', bgValue);
       button.style.setProperty('--hover-bg', hoverBgValue);
+      button.target = '_blank';
 
       const contentSpan = document.createElement('span');
       contentSpan.className = 'btn-osu-big__content';
